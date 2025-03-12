@@ -17,19 +17,18 @@ class HomePage extends StatelessWidget {
           children: [
             Icon(Icons.list_alt_sharp, size: 30),
             SizedBox(width: 10),
-            Text('List Kuliner', style: textHeader1),
+            Text('List Kuliner XXX', style: textHeader1),
           ],
         ),
         const Padding(padding: EdgeInsets.only(bottom: 20)),
-        SizedBox(
-          height: 375,
-          child: ListView.builder(
-            itemCount: listMakanan.length,
-            padding: const EdgeInsets.all(10),
-            itemBuilder: (context, index) {
-              return ListItem(makanan: listMakanan[index]);
-            },
-          ),
+        ListView.builder(
+          itemCount: listMakanan.length,
+          padding: const EdgeInsets.all(10),
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemBuilder: (context, index) {
+            return ListItem(makanan: listMakanan[index]);
+          },
         ),
       ],
     );
