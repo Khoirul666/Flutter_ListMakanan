@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           children: [
             Icon(Icons.list_alt_sharp, size: 30),
             SizedBox(width: 10),
-            Text('List Kuliner XXX', style: textHeader1),
+            Text('List Kuliner Makanan', style: textHeader1),
           ],
         ),
         const Padding(padding: EdgeInsets.only(bottom: 20)),
