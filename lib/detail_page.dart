@@ -150,46 +150,7 @@ class DetailPage extends StatelessWidget {
                 itemCount: makanan.bahan.length,
               ),
             ),
-            SizedBox(
-              height: 100,
-              child: ListView(
-                padding: const EdgeInsets.all(10),
-                children: [
-                  ListView.builder(
-                    itemCount: makanan.gambarlain.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(4),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ),
             SizedBox(height: 20),
-            Text("data"),
-            SizedBox(
-              height: 100,
-              child: ListView(
-                padding: const EdgeInsets.all(10),
-                children: [
-                  ListView.builder(
-                    itemCount: makanan.gambarlain.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(4),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ),
           ],
         ),
       ),
