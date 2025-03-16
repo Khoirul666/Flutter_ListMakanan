@@ -15,7 +15,12 @@ class DetailPage extends StatelessWidget {
           children: <Widget>[
             Stack(
               children: <Widget>[
-                Image.asset(makanan.gambar, scale: 0.5),
+                SizedBox(
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.asset(makanan.gambar, fit: BoxFit.cover),
+                  ),
+                ),
                 SafeArea(
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -112,7 +117,7 @@ class DetailPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Container(
+            SizedBox(
               child: Text(
                 'Bahan Racikan',
                 textAlign: TextAlign.center,
@@ -120,7 +125,7 @@ class DetailPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Container(
+            SizedBox(
               height: 100,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
@@ -145,7 +150,46 @@ class DetailPage extends StatelessWidget {
                 itemCount: makanan.bahan.length,
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(
+              height: 100,
+              child: ListView(
+                padding: const EdgeInsets.all(10),
+                children: [
+                  ListView.builder(
+                    itemCount: makanan.gambarlain.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Text("data"),
+            SizedBox(
+              height: 100,
+              child: ListView(
+                padding: const EdgeInsets.all(10),
+                children: [
+                  ListView.builder(
+                    itemCount: makanan.gambarlain.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
